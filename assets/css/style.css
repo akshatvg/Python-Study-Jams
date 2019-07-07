@@ -93,3 +93,9 @@ Linking Fonts:
     -webkit-animation-delay: 375ms;
     animation-delay: 375ms;
 }
+
+/* Placeholder */
+
+::placeholder {
+    color: #2E4057;
+}
