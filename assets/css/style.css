@@ -36,18 +36,3 @@ Linking Fonts:
     font-weight: normal;
     src: local('Segoe UI Bold Italic'), url('Segoe UI Bold Italic.woff') format('woff');
 }
-
-
-/* Home Section */
-
-.span4 img {
-    margin-right: 10px;
-}
-
-.span4 .img-left {
-    float: left;
-}
-
-.span4 .img-right {
-    float: right;
-}
