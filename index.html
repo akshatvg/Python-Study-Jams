@@ -205,7 +205,7 @@
                     due to the simpler built-in facilities it offers.
                 </div>
 
-                <button type="button" class="btn mx-auto" data-toggle="collapse" data-target="#demo"
+                <button type="button" class="btn mx-auto SeeMore2" data-toggle="collapse" data-target="#demo"
                     style="color: white; background-color: #F18F01;border-radius: 36px;font-size: 15px;width: 150px;margin-top:30px;"
                     align="center">
                     READ MORE
@@ -221,11 +221,23 @@
         <script>
             $(document).ready(function () {
                 $("#demo").on("hide.bs.collapse", function () {
-                    $(".btn").html('READ MORE');
+                    $(".btn").innerHTML('READ MORE');
                 });
-                $("#demo").on("show.bs.collapse", function () {
-                    $(".btn").html('READ LESS');
+                $("#demo").off("show.bs.collapse", function () {
+                    $(".btn").innerHTML('READ LESS');
                 });
+            });
+        </script>
+
+        <script>
+            $('.SeeMore2').click(function () {
+                var $this = $(this);
+                $this.toggleClass('SeeMore2');
+                if ($this.hasClass('SeeMore2')) {
+                    $this.text('READ MORE');
+                } else {
+                    $this.text('READ LESS');
+                }
             });
         </script>
 
