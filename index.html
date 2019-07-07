@@ -80,6 +80,8 @@
 </head>
 
 <body>
+
+    <!--Preloader-->
     <div class="preloader bouncing-loader">
         <div></div>
         <div></div>
@@ -89,7 +91,7 @@
 
     <!--Navbar-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark"
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
             style="background-color: #2E4057;background-image:none;background-repeat: no-repeat;font-size: 17px;font-family: 'Segoe UI Bold';font-weight: normal;padding-top: 20px;padding-bottom: 20px;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
                 aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,7 +106,7 @@
                         <a class="nav-link" href="#about" style="color: white;">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: white;">SESSIONS</a>
+                        <a class="nav-link" href="#sessions" style="color: white;">SESSIONS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" style="color: white;">REGISTER</a>
@@ -112,7 +114,7 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mr-4 inline">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: white;">ABOUT US</a>
+                        <a class="nav-link" href="#about-us" style="color: white;">ABOUT US</a>
                     </li>
                 </ul>
             </div>
@@ -156,7 +158,7 @@
     </section>
 
     <!--About Section-->
-    <section class="section-2" id="about" style="background-color: #048BA8;padding-bottom: 50px;">
+    <section class="section-2" id="about" style="background-color: #048BA8;padding-bottom: 70px;">
 
         <div class="container">
 
@@ -215,46 +217,170 @@
 
         </div>
 
+    </section>
 
-        </div>
+    <!--Sessions-->
+    <section class="section-3" id="sessions" style="padding-bottom: 100px;">
 
-        <script>
-            $(document).ready(function () {
-                $("#demo").on("hide.bs.collapse", function () {
-                    $(".btn").innerHTML('READ MORE');
-                });
-                $("#demo").off("show.bs.collapse", function () {
-                    $(".btn").innerHTML('READ LESS');
-                });
-            });
-        </script>
+        <div class="container">
 
-        <script>
-            $('.SeeMore2').click(function () {
-                var $this = $(this);
-                $this.toggleClass('SeeMore2');
-                if ($this.hasClass('SeeMore2')) {
-                    $this.text('READ MORE');
-                } else {
-                    $this.text('READ LESS');
-                }
-            });
-        </script>
+            <h2 style="color: black;font-weight: bold;font-size: 40px;padding-top:70px;margin-bottom: 100px;"
+                class="text-center">Sessions
+            </h2>
 
-        <script>
-            (function ($) {
-                "use strict";
-                $(window).on("load", function () {
-                    if ($(".preloader").length > 0) {
-                        $(".preloader").fadeOut("slow");
-                    }
-                });
-            })(jQuery);
-        </script>
+            <div class="row justify-content-center">
+                <div class="card-columns">
+
+                    <div class="col-lg-4 d-inline">
+                        <div class="card" style="width: 20rem;border-radius: 20px;">
+                            <div class="card-body"
+                                style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                                <h5 class="card-title text-center"
+                                    style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">First</h5>
+                            </div>
+                            <div style="background-color: white;height: 6px;"></div>
+                            <div class="card-body"
+                                style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 330px;">
+                                <p class="card-text"
+                                    style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
+                                    1. Basic I/O including string templating<br>
+                                    2. Conditionals and Loops<br>
+                                    3. Types<br>
+                                    4. Exception Handling<br>
+                                    5. Functions and classes<br>
+                                    6. Regex<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-inline">
+                        <div class="card" style="width: 20rem;border-radius: 20px;">
+                            <div class="card-body"
+                                style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                                <h5 class="card-title text-center"
+                                    style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Second
+                                </h5>
+                            </div>
+                            <div style="background-color: white;height: 6px;"></div>
+                            <div class="card-body"
+                                style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 330px;">
+                                <p class="card-text"
+                                    style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
+                                    1. Magic Methods<br>
+                                    2. Context managers<br>
+                                    3. OOPS design and real world examples<br>
+                                    4. Decorators<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-inline">
+                        <div class="card" style="width: 20rem;border-radius: 20px;">
+                            <div class="card-body"
+                                style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                                <h5 class="card-title text-center"
+                                    style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Third</h5>
+                            </div>
+                            <div style="background-color: white;height: 6px;"></div>
+                            <div class="card-body"
+                                style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 330px;">
+                                <p class="card-text"
+                                    style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
+                                    1. Flask<br>
+                                    2. Web Scraping<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 
     </section>
+
+    <!--About Us-->
+    <section class="section-6" id="about-us" style="background-color: #2E4057;padding-bottom: 140px;">
+
+        <div class="container">
+
+            <h2 style="color: white;font-weight: bold;font-size: 40px;padding-top:70px;" class="text-center">About Us
+            </h2>
+
+            <div class="row">
+
+                <div class="text-center text-break"
+                    style="color: rgba(255, 255, 255, 0.89);font-weight: lighter;font-size: 20px;margin-top: 50px;line-height: 2rem;">
+                    DSC is a developers’ community in VIT Vellore that aims at rejuvenating the minds of beginners in
+                    tech. We provide opportunities to not only skills and knowledge, but also innovation and
+                    willingness. In a desire to introduce creativity into technicalities, designers at DSC collaborate
+                    with the developers and managers to bring out really effective executions. Students here have worked
+                    at real – time projects that use web dev, app dev, AI and much more.
+                </div>
+
+    </section>
+
+    <!--Footer With Social Links-->
+
+    <footer class="social-footer" style="background-color: white;padding-top:20px;padding-bottom: 10px;">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <a href="https://www.facebook.com/dscvitvellore"><img class="d-inline"
+                        src="assets/img/Facebook.svg"></a>
+                <a href="https://github.com/GDGVIT"><img class="d-inline" src="assets/img/Github.svg"></a>
+                <a href="mailto:dscvitvellore@gmail.com"><img class="d-inline" src="assets/img/Gmail.svg"></a>
+                <a href="https://www.instagram.com/dscvitvellore"><img class="d-inline" src="assets/img/Instagram.svg"></a>
+                <a href="https://www.linkedin.com/company/dscvit"><img class="d-inline"
+                        src="assets/img/LinkedIN.svg"></a>
+                <a href="https://medium.com/gdg-vit"><img class="d-inline" src="assets/img/Medium.svg"></a>
+                <a href="https://twitter.com/dscvit"><img class="d-inline" src="assets/img/Twitter.svg"></a>
+                <a href="https://www.youtube.com/channel/UCvT-ZJF7fXHJi9kDeCPR-zg"><img class="d-inline"
+                        src="assets/img/Youtube.svg"></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!--Read Options and Preloader Scripts-->
+    <script>
+        $(document).ready(function () {
+            $("#demo").on("hide.bs.collapse", function () {
+                $(".btn").innerHTML('READ MORE');
+            });
+            $("#demo").off("show.bs.collapse", function () {
+                $(".btn").innerHTML('READ LESS');
+            });
+        });
+    </script>
+
+    <script>
+        $('.SeeMore2').click(function () {
+            var $this = $(this);
+            $this.toggleClass('SeeMore2');
+            if ($this.hasClass('SeeMore2')) {
+                $this.text('READ MORE');
+            } else {
+                $this.text('READ LESS');
+            }
+        });
+    </script>
+
+    <script>
+        (function ($) {
+            "use strict";
+            $(window).on("load", function () {
+                if ($(".preloader").length > 0) {
+                    $(".preloader").fadeOut("slow");
+                }
+            });
+        })(jQuery);
+    </script>
 
 </body>
 
