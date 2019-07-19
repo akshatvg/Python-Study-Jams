@@ -826,8 +826,7 @@
                 context: Form,
                 success: function (callback) {
                     console.log(callback);
-                    // Watch out for Cross Site Scripting security issues when setting dynamic content!
-                    $(this).text( + callback.first_name + ' ' + callback.last_name + '!');
+                    $(this).text(callback.first_name + ' ' + callback.last_name + ' ' + callback.email + ' ' + callback.reg_no + ' ' + callback.mob_no + ' ' + callback.gender);
                 },
                 error: function () {
                     $(this).html("error!");
