@@ -662,8 +662,12 @@
 
                 postData("https://python-study-jams.herokuapp.com/new", data)
                     .then(function (res) {
+                        alert("Form Submitted");
                         console.log(res);
-                    });
+                    })
+                    .catch(function (err) {
+                        console.log(err);
+                    })
             })
 
 
@@ -675,7 +679,9 @@
                     },
                     body: JSON.stringify(data),
                 })
-                    .then(response => response.json());
+                    .then(function (response) {
+                        response.json();
+                    });
             };
 
         }
