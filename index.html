@@ -222,6 +222,14 @@
 
 <body>
 
+    <!--Preloader-->
+    <div class="preloader bouncing-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
     <!--Navbar-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
@@ -293,7 +301,7 @@
     </section>
 
     <!--About Section-->
-    <section class="section-2 animated fadeInRight" id="about" style="background-color: #048BA8;padding-bottom: 70px;">
+    <section class="section-2 animated fadeInLeft" id="about" style="background-color: #048BA8;padding-bottom: 70px;">
 
         <div class="container">
 
@@ -436,7 +444,7 @@
     </section>
 
     <!--Instructors-->
-    <section class="section-4 animated fadeInRight" style="padding-bottom: 70px;background-color: #F18F01;">
+    <section class="section-4 animated fadeInLeft" style="padding-bottom: 70px;background-color: #F18F01;">
 
         <div class="container">
 
@@ -585,7 +593,7 @@
     </section>
 
     <!--About Us-->
-    <section class="section-6 animated fadeInRight" id="about-us"
+    <section class="section-6 animated fadeInLeft" id="about-us"
         style="background-color: #2E4057;padding-bottom: 140px;">
 
         <div class="container">
@@ -748,6 +756,17 @@
                 $this.text('READ LESS');
             }
         });
+
+
+        //Preloader
+        (function ($) {
+            "use strict";
+            $(window).on("load", function () {
+                if ($(".preloader").length > 0) {
+                    $(".preloader").fadeOut("slow");
+                }
+            });
+        })(jQuery);
 
     </script>
 
