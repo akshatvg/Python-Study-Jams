@@ -224,13 +224,13 @@
 
 <body>
 
-    <!--Preloader-->
+    <!--Preloader
     <div class="preloader bouncing-loader">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
-    </div>
+    </div>-->
 
     <!--Navbar-->
     <header>
@@ -661,25 +661,28 @@
                 let email = document.getElementById("email").value;
                 let gender = document.getElementById("gender").value;
 
-                let data = {
-                    first_name: first_name,
-                    last_name: last_name,
-                    mob_no: mob_no,
-                    reg_no: reg_no,
-                    email: email,
-                    gender: gender
+                //Google reCAPTCHA v3
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
+                        postData("https://python-study-jams.herokuapp.com/new", data = {
+                            first_name: first_name,
+                            last_name: last_name,
+                            mob_no: mob_no,
+                            reg_no: reg_no,
+                            email: email,
+                            gender: gender,
+                            token: token
+                        })
+                            .then(function (res) {
+                                alert("Form Submitted");
+                                console.log(res);
+                            })
+                            .catch(function (err) {
+                                console.log(err);
+                            })
+                    })
                 }
-
-                postData("https://python-study-jams.herokuapp.com/new", data)
-                    .then(function (res) {
-                        alert("Form Submitted");
-                        console.log(res);
-                    })
-                    .catch(function (err) {
-                        console.log(err);
-                    })
-            })
-
+      });
 
             function postData(url, data) {
                 return fetch(url, {
@@ -770,19 +773,6 @@
             });
         })(jQuery);
 
-
-        //Google reCAPTCHA v3
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
-                $.ajax({
-                    type: "POST",
-                    url: 'https://www.google.com/recaptcha/api/siteverify',
-                    data: { "secret": "6LdDzK8UAAAAAN-t54FWT3ryDPn1ySEVDJM5f3HT", "response": response, token: token },
-                    contentType: 'application/x-www-form-urlencoded',
-                    success: function (data2) { console.log(data2); }
-                });
-            }
-      });
   });
 
     </script>
