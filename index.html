@@ -774,33 +774,16 @@
         //Google reCAPTCHA v3
         grecaptcha.ready(function () {
             grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
-         ...
+                $.ajax({
+                    type: "POST",
+                    url: 'https://www.google.com/recaptcha/api/siteverify',
+                    data: { "secret": "6LdDzK8UAAAAAN-t54FWT3ryDPn1ySEVDJM5f3HT", "response": response, token: token },
+                    contentType: 'application/x-www-form-urlencoded',
+                    success: function (data2) { console.log(data2); }
+                });
+            }
       });
   });
-
-        verifyMe("https://www.google.com/recaptcha/api/siteverify", data2)
-            .then(function (res) {
-                console.log(res);
-            })
-            .catch(function (err) {
-                console.log(err);
-            })
-            })
-
-
-        function verifyMe(url, data2) {
-            return fetch(url, {
-                method: 'POST',
-                secret: '6LdDzK8UAAAAAN-t54FWT3ryDPn1ySEVDJM5f3HT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data2),
-            })
-                .then(function (response2) {
-                    response2.json();
-                });
-        };
 
     </script>
 
