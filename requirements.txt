@@ -1,6 +1,0 @@
-Flask==1.0.3
-Flask-Cors==3.0.7
-pipreqs==0.4.9
-pymango==0.1.1
-pymongo==3.8.0pyparsing==2.4.0
-dnspython==1.16.0
