@@ -647,6 +647,7 @@
 
     </footer>
 
+    
     <script>
 
         //Form
@@ -680,17 +681,16 @@
                         })
                             .then(function (response) {
                                 return response.json();
-                            });
-                    .then(function (re) {
+                            })
+                            .then(function (re) {
                                 console.log(res);
+                            })
+                            .catch(function (err) {
+                                console.log(err);
                             });
-                    .catch (function (err) {
-                            console.log(err);
-                        });
-                };
+                    });
+                })
 
-
-                //Instructor Section
                 $('.ayush').on({
                     'click': function () {
                         $('#change-image').attr('src', 'assets/img/ayush.jpg');
@@ -752,6 +752,8 @@
                         }
                     });
                 })(jQuery);
+            })
+        }
 
     </script>
 
