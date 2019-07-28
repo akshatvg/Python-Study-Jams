@@ -224,13 +224,13 @@
 
 <body>
 
-    <!--Preloader
+    <!--Preloader-->
     <div class="preloader bouncing-loader">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
-    </div>-->
+    </div>
 
     <!--Navbar-->
     <header>
@@ -652,7 +652,6 @@
         //Form
 
         window.onload = function () {
-
             document.getElementById("sbtns").addEventListener("click", function () {
                 let first_name = document.getElementById("first_name").value;
                 let last_name = document.getElementById("last_name").value;
@@ -661,7 +660,7 @@
                 let email = document.getElementById("email").value;
                 let gender = document.getElementById("gender").value;
 
-                //Google reCAPTCHA v3
+                //Google reCaptcha
                 grecaptcha.ready(function () {
                     grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
                         postData("https://python-study-jams.herokuapp.com/new", data = {
@@ -680,9 +679,9 @@
                             .catch(function (err) {
                                 console.log(err);
                             })
-                    })
-                }
-      });
+                    });
+                });
+            })
 
             function postData(url, data) {
                 return fetch(url, {
@@ -696,36 +695,29 @@
                         response.json();
                     });
             };
-
         }
-
-
         //Instructor Section
-
         $('.ayush').on({
             'click': function () {
                 $('#change-image').attr('src', 'assets/img/ayush.jpg');
                 $('#main-name').text("Ayush Priya");
-                $('#main-text').text("An experienced developer in Python, Ayush is currently pursuing his undergraduate degree (BTech) in CSE, second year. His forte is desktop application and he is an innovator in web scraping.");
+                $('#main-text').text("An experienced developer in Python, Ayush is currently pursuing his undergraduate degree (BTech) in CSE, second year.His forte is desktop application and he is an innovator in web scraping.");
             }
         });
-
         $('.samyak').on({
             'click': function () {
                 $('#change-image').attr('src', 'assets/img/samyak.jpg');
                 $('#main-name').text("Samyak Jain");
-                $('#main-text').text("Samyak, a skilled competitive coder, has been constantly improving in his developer domains while pursuing BTech from core CSE. He is an experienced backend developer who knows Python and Golang as well.");
+                $('#main-text').text("Samyak, a skilled competitive coder, has been constantly improving in his developer domains while pursuing BTech from core CSE.He is an experienced backend developer who knows Python and Golang as well.");
             }
         });
-
         $('.angad').on({
             'click': function () {
                 $('#change-image').attr('src', 'assets/img/angad.jpg');
                 $('#main-name').text("Angad Sharma");
-                $('#main-text').text("Angad, our GoLang expert is the icon of technical dexterity. His highly efficient coding skills with an amalgamation of humour makes him the perfect blend of a friend and a guide. His punctuality and profound knowledge in computer science is awe-inspiring.");
+                $('#main-text').text("Angad, our GoLang expert is the icon of technical dexterity. His highly efficient coding skills with an amalgamation of humour makes him the perfect blend of a friend and a guide.His punctuality and profound knowledge in computer science is awe - inspiring.");
             }
         });
-
         $('.ubaid').on({
             'click': function () {
                 $('#change-image').attr('src', 'assets/img/ubaid.jpg');
@@ -733,25 +725,20 @@
                 $('#main-text').text("Ubaid Usmani, our web scraping expert will be guiding you to scrape the web on an introductory scale.");
             }
         });
-
         $('.amrut').on({
             'click': function () {
                 $('#change-image').attr('src', 'assets/img/amrut.png');
                 $('#main-name').text("Amrut Phadke");
-                $('#main-text').text("Amrut has a knack of stealing the show with his charismatic personality and his confident attitude. He is highly skilled in Backend, DevOps, ML and Game Development. His love for Coding and Mangoes leave all of us nothing but flabbergasted and musing.");
+                $('#main-text').text("Amrut has a knack of stealing the show with his charismatic personality and his confident attitude.He is highly skilled in Backend, DevOps, ML and Game Development.His love for Coding and Mangoes leave all of us nothing but flabbergasted and musing.");
             }
         });
-
-
-        //Read More or Less
-
+        //Read More/ Less
         $("#demo").on("hide.bs.collapse", function () {
             $(".btn").innerHTML('READ MORE');
         });
         $("#demo").off("show.bs.collapse", function () {
             $(".btn").innerHTML('READ LESS');
         });
-
         $('.SeeMore2').click(function () {
             var $this = $(this);
             $this.toggleClass('SeeMore2');
@@ -762,7 +749,6 @@
             }
         });
 
-
         //Preloader
         (function ($) {
             "use strict";
@@ -772,8 +758,6 @@
                 }
             });
         })(jQuery);
-
-  });
 
     </script>
 
