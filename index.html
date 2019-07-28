@@ -41,7 +41,7 @@
 
     <link rel="canonical" href="https://python.dscvit.com">
 
-    <!--Linking Favicon, Fonts, Bootstrap, Font Awesome, Animate-->
+    <!--Linking Favicon, Fonts, Bootstrap, Font Awesome, Animate, reCaptcha-->
     <link rel="icon" href="assets/img/favicon.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
@@ -63,6 +63,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue"></script>
 
     <title>Python Study Jams</title>
 
@@ -738,7 +740,7 @@
         });
 
 
-        //Read More/ Less
+        //Read More or Less
 
         $("#demo").on("hide.bs.collapse", function () {
             $(".btn").innerHTML('READ MORE');
@@ -767,6 +769,38 @@
                 }
             });
         })(jQuery);
+
+
+        //Google reCAPTCHA v3
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
+         ...
+      });
+  });
+
+        verifyMe("https://www.google.com/recaptcha/api/siteverify", data2)
+            .then(function (res) {
+                console.log(res);
+            })
+            .catch(function (err) {
+                console.log(err);
+            })
+            })
+
+
+        function verifyMe(url, data2) {
+            return fetch(url, {
+                method: 'POST',
+                secret: '6LdDzK8UAAAAAN-t54FWT3ryDPn1ySEVDJM5f3HT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data2),
+            })
+                .then(function (response2) {
+                    response2.json();
+                });
+        };
 
     </script>
 
