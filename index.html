@@ -41,7 +41,7 @@
 
     <link rel="canonical" href="https://python.dscvit.com">
 
-    <!--Linking Favicon, Fonts, Bootstrap, Font Awesome, Animate, reCaptcha-->
+    <!--Linking Favicon, Fonts, Bootstrap, Font Awesome, Animate, reCaptcha, CSS-->
     <link rel="icon" href="assets/img/favicon.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
@@ -57,22 +57,11 @@
 
     <script src="https://www.google.com/recaptcha/api.js?render=6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue"></script>
 
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+
     <title>Python Study Jams</title>
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Karla', sans-serif;
-        }
-
-        /* Read More */
-        #more {
-            display: none;
-        }
-
         /* 
         Linking Fonts:
         1) Segoe UI.
@@ -108,107 +97,6 @@
             font-weight: normal;
             src: local('Segoe UI Bold Italic'), url('assets/css/Segoe UI Bold Italic.woff') format('woff');
         }
-
-        /* Pre-Loader */
-
-        @-webkit-keyframes bouncing-loader {
-            to {
-                -webkit-transform: translate3d(0, -1rem, 0);
-                transform: translate3d(0, -1rem, 0);
-            }
-        }
-
-        @keyframes bouncing-loader {
-            to {
-                -webkit-transform: translate3d(0, -1rem, 0);
-                transform: translate3d(0, -1rem, 0);
-            }
-        }
-
-        .bouncing-loader {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            position: fixed;
-            z-index: 999999999;
-            background: #fff;
-            width: 100%;
-            top: 0;
-        }
-
-        .bouncing-loader>div {
-            width: 1.5rem;
-            height: 1.5rem;
-            margin: 0.75rem;
-            background: #4285f4;
-            border-radius: 50%;
-            -webkit-animation: bouncing-loader 500ms infinite alternate;
-            animation: bouncing-loader 500ms infinite alternate;
-        }
-
-        .bouncing-loader>div:nth-child(2) {
-            background: #ea4335;
-            -webkit-animation-delay: 125ms;
-            animation-delay: 125ms;
-        }
-
-        .bouncing-loader>div:nth-child(3) {
-            background: #fbbc05;
-            -webkit-animation-delay: 250ms;
-            animation-delay: 250ms;
-        }
-
-        .bouncing-loader>div:nth-child(4) {
-            background: #34a853;
-            -webkit-animation-delay: 375ms;
-            animation-delay: 375ms;
-        }
-
-        /* Placeholder */
-
-        ::placeholder {
-            color: #2E4057;
-        }
-
-        /* Chevron */
-        .chevron-up {
-            position: fixed;
-            bottom: 5%;
-            right: 5%;
-        }
-
-        /* Animation */
-
-        .section2 {
-            animation-duration: 5s;
-            animation-delay: 2s;
-        }
-
-        .section3 {
-            animation-duration: 5s;
-            animation-delay: 2s;
-        }
-
-        .section4 {
-            animation-duration: 5s;
-            animation-delay: 2s;
-        }
-
-        .section5 {
-            animation-duration: 5s;
-            animation-delay: 2s;
-        }
-
-        .section6 {
-            animation-duration: 5s;
-            animation-delay: 2s;
-        }
-
-        .social-footer {
-            animation-duration: 2s;
-            animation-delay: 1s;
-        }
     </style>
 
 </head>
@@ -223,6 +111,7 @@
         <div></div>
     </div>-->
 
+
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
         style="background-color: #2E4057;background-image:none;background-repeat: no-repeat;font-size: 17px;font-family: 'Segoe UI Bold';font-weight: normal;padding-top: 20px;padding-bottom: 20px;">
@@ -232,66 +121,72 @@
         </button>
         <div class="collapse navbar-collapse ml-auto" id="navbarTogglerDemo01">
             <ul class="navbar-nav mr-auto smooth-scroll">
-                <li class="nav-item mr-auto ml-2">
+                <li class="nav-item ml-auto ml-2">
                     <a class="nav-link" href="#home" style="color: white;">HOME</a>
                 </li>
-                <li class="nav-item mr-auto ml-2">
+                <li class="nav-item ml-auto ml-2">
                     <a class="nav-link" href="#about" style="color: white;">ABOUT</a>
                 </li>
-                <li class="nav-item mr-auto ml-2">
+                <li class="nav-item ml-auto ml-2">
                     <a class="nav-link" href="#sessions" style="color: white;">SESSIONS</a>
                 </li>
-                <li class="nav-item mr-auto ml-2">
+                <li class="nav-item ml-auto ml-2">
                     <a class="nav-link" href="#register" style="color: white;">REGISTER</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto inline">
-                <li class="nav-item mr-auto">
-                    <a class="nav-link" href="#about-us" style="color: white;">ABOUT US</a>
+                <li class="nav-item ml-auto">
+                    <a class="nav-link" href="#about-us" style="color: white;">ABOUT DSC VIT</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <div id="home"></div>
     <!--Heading With Text & Illustration-->
-    <section class="section-1 animated fadeInRight" id="home" style="padding-bottom: 50px;">
-
-        <!--Heading-->
-        <div class="container">
-            <div class="grid">
-                <div class="row">
-                    <h1 style="font-weight: bold;font-size: 70px; color: #048BA8;margin-top: 13vh;"
-                        class="col-lg-8 text-center">Python Study Jams</h1>
+    <section class="section-1 animated fadeInRight" style="padding-bottom: 50px;">
+        <div class="first_scale" style="height:auto;min-height: 85vh;">
+            <!--Heading-->
+            <div class="container">
+                <div class="grid">
+                    <div class="row">
+                        <h1 style="font-weight: bold;font-size: 70px; color: #048BA8;margin-top: 20vh;"
+                            class="col-lg-8 text-center">Python Study Jams</h1>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!--Text and Illustration-->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="d-inline col-md-5 text-center text-md-left">
-                    <div style="font-weight: bold;font-size: 50px; color: black;margin-top: 40px;padding-left:10px;">See
-                        how
-                        all pieces<br>fit together
-                    </div>
-                    <div style="margin-top: 20px;padding-left:10px;">
-                        <div class="d-inline" style="font-weight: normal;font-size: 30px; color: black;">
-                            by&nbsp;&nbsp;&nbsp;
+            <!--Text and Illustration-->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="d-inline col-md-5 text-center text-md-left">
+                        <div
+                            style="font-weight: bold;font-size: 50px; color: black;margin-top: 40px;padding-left:10px;">
+                            See
+                            how
+                            all pieces<br>fit together
                         </div>
-                        <img class="d-inline img-responsive" src="assets/img/Group 11.svg">
+                        <div style="margin-top: 20px;padding-left:10px;">
+                            <div class="d-inline" style="font-weight: normal;font-size: 30px; color: black;">
+                                by&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <img class="d-inline img-responsive" src="assets/img/Group 11.svg"
+                                style="height: 25px;width: auto;">
+                        </div>
                     </div>
-                </div>
-                <div class="d-inline col-md-6">
-                    <img class="img-responsive" src="assets/img/Home Screen Illustration.svg"
-                        style="height: 400px;width: 400px;">
+                    <div class="d-inline col-md-6">
+                        <img class="img-responsive" src="assets/img/Home Screen Illustration.svg"
+                            style="height: 300px;width: auto;">
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div id="about"></div>
     </section>
 
+
     <!--About Section-->
-    <section class="section-2 animated fadeInLeft" id="about" style="background-color: #048BA8;padding-bottom: 70px;">
+    <section class="section-2 animated fadeInLeft" style="background-color: #048BA8;padding-bottom: 70px;">
 
         <div class="container">
 
@@ -341,8 +236,7 @@
                 </div>
 
                 <button type="button" class="btn mx-auto SeeMore2" data-toggle="collapse" data-target="#demo"
-                    style="color: white; background-color: #F18F01;border-radius: 36px;font-size: 15px;width: 150px;margin-top:30px;"
-                    align="center">
+                    style="color: white; background-color: #F18F01;border-radius: 36px;font-size: 15px;width: 150px;margin-top:30px;text-align: center">
                     READ MORE
                 </button>
 
@@ -353,6 +247,7 @@
     </section>
 
     <!--Sessions-->
+
     <section class="section-3 animated fadeInRight" id="sessions" style="padding-bottom: 100px;">
 
         <div class="container">
@@ -362,118 +257,114 @@
             </h2>
 
             <div class="row justify-content-center">
-                <div class="card-columns">
 
-                    <div class="col-12 col-lg-4">
-                        <div class="card" style="width: 20rem;border-radius: 20px;">
-                            <div class="card-body"
-                                style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
-                                <h5 class="card-title text-center"
-                                    style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">First</h5>
-                            </div>
-                            <div style="background-color: white;height: 6px;"></div>
-                            <div class="card-body"
-                                style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 330px;">
-                                <p class="card-text"
-                                    style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
-                                    1. Basic I/O<br>
-                                    2. Types<br>
-                                    3. String Templating<br>
-                                    4. Conditionals and Loops<br>
-                                    5. List Comprehension<br>
-                                    6. Functions<br>
-                                </p>
-                            </div>
+                <div class="col-12 col-md-4">
+                    <div class="card rnd" style="width: 270px;border-radius: 20px;">
+                        <div class="card-body"
+                            style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                            <h5 class="card-title text-center"
+                                style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">First</h5>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="card" style="width: 20rem;border-radius: 20px;">
-                            <div class="card-body"
-                                style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
-                                <h5 class="card-title text-center"
-                                    style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Second
-                                </h5>
-                            </div>
-                            <div style="background-color: white;height: 6px;"></div>
-                            <div class="card-body"
-                                style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 330px;">
-                                <p class="card-text"
-                                    style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
-                                    1. File Handling<br>
-                                    2. Exception Handling<br>
-                                    3. Regular Expression<br>
-                                    4. Classes and Objects<br>
-                                    5. Object Oriented Programming Paradigm<br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="card" style="width: 20rem;border-radius: 20px;">
-                            <div class="card-body"
-                                style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
-                                <h5 class="card-title text-center"
-                                    style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Third</h5>
-                            </div>
-                            <div style="background-color: white;height: 6px;"></div>
-                            <div class="card-body"
-                                style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 330px;">
-                                <p class="card-text"
-                                    style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
-                                    1. Flask<br>
-                                    2. Database Handling<br>
-                                    3. Building Web Applications - Render-based, APIs<br>
-                                    4. Decorators<br>
-                                    5. Mini Project - Building an Email Client to send Mails from CSVs<br>
-                                </p>
-                            </div>
+                        <div style="background-color: white;height: 6px;"></div>
+                        <div class="card-body"
+                            style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 360px;">
+                            <p class="card-text"
+                                style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
+                                1. Basic I/O<br>
+                                2. Types<br>
+                                3. String Templating<br>
+                                4. Conditionals and Loops<br>
+                                5. List Comprehension<br>
+                                6. Functions<br>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div style="padding-top: 250px;padding-bottom: 250px;"></div>
-                <div class="row justify-content-center">
-                    <div class="card-columns ml-auto mr-auto">
-                        <div class="col-12 col-lg-6">
-                            <div class="card" style="width: 20rem;border-radius: 20px;">
-                                <div class="card-body"
-                                    style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
-                                    <h5 class="card-title text-center"
-                                        style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Fourth
-                                    </h5>
-                                </div>
-                                <div style="background-color: white;height: 6px;"></div>
-                                <div class="card-body"
-                                    style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 330px;">
-                                    <p class="card-text"
-                                        style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
-                                        1. Fetching Content from Web with requests module<br>
-                                        2. Parsing HTML with BeautifulSoup module<br>
-                                        3. Mini Project - Building a Web Crawler<br>
-                                    </p>
-                                </div>
-                            </div>
+                <div class="col-12 col-md-4">
+                    <div class="card rnd" style="width: 270px;border-radius: 20px;">
+                        <div class="card-body"
+                            style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                            <h5 class="card-title text-center"
+                                style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Second
+                            </h5>
                         </div>
-                        <div class="col-12 col-lg-6">
-                            <div class="card" style="width: 20rem;border-radius: 20px;">
-                                <div class="card-body"
-                                    style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
-                                    <h5 class="card-title text-center"
-                                        style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">FIfth
-                                    </h5>
-                                </div>
-                                <div style="background-color: white;height: 6px;"></div>
-                                <div class="card-body"
-                                    style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 330px;">
-                                    <p class="card-text"
-                                        style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
-                                        1. Tkinter, PyQt<br>
-                                        2. Graphical User Interfaces<br>
-                                        3. Building GUIs for Desktop Applications<br>
-                                        4. Mini Project - Building a Password Manager Desktop Application<br>
-                                    </p>
-                                </div>
-                            </div>
+                        <div style="background-color: white;height: 6px;"></div>
+                        <div class="card-body"
+                            style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 360px;">
+                            <p class="card-text"
+                                style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
+                                1. File Handling<br>
+                                2. Exception Handling<br>
+                                3. Regular Expression<br>
+                                4. Classes and Objects<br>
+                                5. Object Oriented Programming Paradigm<br>
+                            </p>
                         </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card rnd" style="width: 270px;border-radius: 20px;">
+                        <div class="card-body"
+                            style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                            <h5 class="card-title text-center"
+                                style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Third</h5>
+                        </div>
+                        <div style="background-color: white;height: 6px;"></div>
+                        <div class="card-body"
+                            style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 360px;">
+                            <p class="card-text"
+                                style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
+                                1. Flask<br>
+                                2. Database Handling<br>
+                                3. Building Web Applications - Render-based, APIs<br>
+                                4. Decorators<br>
+                                5. Mini Project - Building an Email Client to send Mails from CSVs<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 offset-md-2">
+                <div class="card rnd2" style="width: 270px;border-radius: 20px;">
+                    <div class="card-body"
+                        style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                        <h5 class="card-title text-center"
+                            style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Fourth
+                        </h5>
+                    </div>
+                    <div style="background-color: white;height: 6px;"></div>
+                    <div class="card-body"
+                        style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 360px;">
+                        <p class="card-text"
+                            style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
+                            1. Fetching Content from Web with requests module<br>
+                            2. Parsing HTML with BeautifulSoup module<br>
+                            3. Mini Project - Building a Web Crawler<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mr-auto">
+                <div class="card rnd2" style="width: 270px;border-radius: 20px;">
+                    <div class="card-body"
+                        style="background-color: #F18F01;border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                        <h5 class="card-title text-center"
+                            style="color: white;font-weight: bold;font-size: 28px;padding-top: 10px;">Fifth
+                        </h5>
+                    </div>
+                    <div style="background-color: white;height: 6px;"></div>
+                    <div class="card-body"
+                        style="background-color: #048BA8;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;height: 360px;">
+                        <p class="card-text"
+                            style="color: white;font-weight: normal;font-size: 18px;line-height: 2.3rem;">
+                            1. Tkinter, PyQt<br>
+                            2. Graphical User Interfaces<br>
+                            3. Building GUIs for Desktop Applications<br>
+                            4. Mini Project - Building a Password Manager Desktop Application<br>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -514,77 +405,80 @@
 
             <!--Others-->
             <div class="row justify-content-center" style="margin-top: 100px;">
-                <div class="row justify-content-center d-inline col-lg-4 text-center">
-                    <div class="d-inline">
-                        <input type="image" name="imgbtn" src="assets/img/ayush.jpg" alt="" class="ayush"
-                            style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
+                <div class="row justify-content-center">
+                    <div class="d-inline col-lg-4 text-center">
+                        <div class="d-inline">
+                            <input type="image" name="imgbtn" src="assets/img/ayush.jpg" alt="" class="ayush"
+                                style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
+                        </div>
+                        <div class="row justify-content-center d-inline">
+                            <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
+                                Ayush Priya
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="d-inline col-lg-4 text-center">
+                        <div class="d-inline">
+                            <input type="image" name="imgbtn" src="assets/img/samyak.jpg" alt="" class="samyak"
+                                style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
+                        </div>
+                        <div class="row justify-content-center d-inline">
+                            <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
+                                Samyak Jain
+                            </div>
+                        </div>
                     </div>
-                    <div class="row justify-content-center d-inline">
-                        <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
-                            Ayush Priya
+                    <div class="d-inline col-lg-4 text-center">
+                        <div class="d-inline">
+                            <input type="image" name="imgbtn" src="assets/img/angad.jpg" alt="" class="angad"
+                                style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
+                        </div>
+                        <div class="row justify-content-center d-inline">
+                            <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
+                                Angad Sharma
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-inline col-lg-4 text-center">
+                        <div class="d-inline">
+                            <input type="image" name="imgbtn" src="assets/img/ubaid.jpg" alt="" class="ubaid"
+                                style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
+                        </div>
+                        <div class="row justify-content-center d-inline">
+                            <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
+                                Ubaid Usmani
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-inline col-lg-4 text-center">
+                        <div class="d-inline">
+                            <input type="image" name="imgbtn" src="assets/img/paritosh.jpeg" alt="" class="paritosh"
+                                style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
+                        </div>
+                        <div class="row justify-content-center d-inline">
+                            <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
+                                Paritosh Mahajan
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center d-inline col-lg-4 text-center">
-                    <div class="d-inline">
-                        <input type="image" name="imgbtn" src="assets/img/samyak.jpg" alt="" class="samyak"
-                            style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
-                    </div>
-                    <div class="row justify-content-center d-inline">
-                        <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
-                            Samyak Jain
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center d-inline col-lg-4 text-center">
-                    <div class="d-inline">
-                        <input type="image" name="imgbtn" src="assets/img/angad.jpg" alt="" class="angad"
-                            style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
-                    </div>
-                    <div class="row justify-content-center d-inline">
-                        <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
-                            Angad Sharma
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center d-inline col-lg-4 text-center">
-                    <div class="d-inline">
-                        <input type="image" name="imgbtn" src="assets/img/ubaid.jpg" alt="" class="ubaid"
-                            style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
-                    </div>
-                    <div class="row justify-content-center d-inline">
-                        <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
-                            Ubaid Usmani
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center d-inline col-lg-4 text-center">
-                    <div class="d-inline">
-                        <input type="image" name="imgbtn" src="assets/img/amrut.png" alt="" class="amrut"
-                            style="height: 60px;width: 60px;outline: none;border-radius: 50px;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.267);border: 4px solid whitesmoke;">
-                    </div>
-                    <div class="row justify-content-center d-inline">
-                        <div style="font-weight: bold;font-size: 22px; color: white;" class="text-center">
-                            Amrut Phadke
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
+        </div>
 
     </section>
 
+
     <!--Register-->
-    <section class="section-5 animated fadeInRight" id="register" style="padding-bottom: 70px;padding-top: 40px;">
+    <div id="register"></div>
+    <section class="section-5 animated fadeInRight" style="padding-bottom: 70px;padding-top: 40px;">
 
         <div class="container">
 
             <!--Illustration-->
             <div class="row justify-content-center">
-                <div class="d-inline col-md-6">
+                <div class="d-inline col-md-6 text-center">
                     <img class="img-responsive" src="assets/img/Register Illustration.svg"
-                        style="height: 400px;width: 400px;">
+                        style="height: 300px;width: auto;">
                 </div>
 
                 <!--Registration Form-->
@@ -632,23 +526,28 @@
 
     </section>
 
+
     <!--About Us-->
-    <section class="section-6 animated fadeInLeft" id="about-us"
-        style="background-color: #2E4057;padding-bottom: 140px;">
+    <div id="about-us"></div>
+    <section class="section-6 animated fadeInLeft" style="background-color: #2E4057;padding-bottom: 140px;">
 
         <div class="container">
 
-            <h2 style="color: white;font-weight: bold;font-size: 40px;padding-top:70px;" class="text-center">About Us
+            <h2 style="color: white;font-weight: bold;font-size: 40px;padding-top:70px;" class="text-center">About
+                Us
             </h2>
 
             <div class="row">
 
                 <div class="text-center text-break"
                     style="color: rgba(255, 255, 255, 0.89);font-weight: lighter;font-size: 20px;margin-top: 50px;line-height: 2rem;">
-                    DSC is a developers’ community in VIT Vellore that aims at rejuvenating the minds of beginners in
+                    DSC is a developers’ community in VIT Vellore that aims at rejuvenating the minds of beginners
+                    in
                     tech. We provide opportunities to not only skills and knowledge, but also innovation and
-                    willingness. In a desire to introduce creativity into technicalities, designers at DSC collaborate
-                    with the developers and managers to bring out really effective executions. Students here have worked
+                    willingness. In a desire to introduce creativity into technicalities, designers at DSC
+                    collaborate
+                    with the developers and managers to bring out really effective executions. Students here have
+                    worked
                     at real – time projects that use web dev, app dev, AI and much more.
                 </div>
 
@@ -752,21 +651,21 @@
             'click': function () {
                 $('#change-image').attr('src', 'assets/img/angad.jpg');
                 $('#main-name').text("Angad Sharma");
-                $('#main-text').text("Angad, our GoLang expert is the icon of technical dexterity. His highly efficient coding skills with an amalgamation of humour makes him the perfect blend of a friend and a guide.His punctuality and profound knowledge in computer science is awe - inspiring.");
+                $('#main-text').text("Ahoy captain. Dropping container bombs on the cloud like a pro, Angad fits the Dev into the Ops like butter in a toast.");
             }
         });
         $('.ubaid').on({
             'click': function () {
                 $('#change-image').attr('src', 'assets/img/ubaid.jpg');
                 $('#main-name').text("Ubaid Usmani");
-                $('#main-text').text("Ubaid Usmani, our web scraping expert will be guiding you to scrape the web on an introductory scale.");
+                $('#main-text').text("Cultivating the intelligence of artificial beginnings, Ubaid gives being human a new meaning.");
             }
         });
-        $('.amrut').on({
+        $('.paritosh').on({
             'click': function () {
-                $('#change-image').attr('src', 'assets/img/amrut.png');
-                $('#main-name').text("Amrut Phadke");
-                $('#main-text').text("Amrut has a knack of stealing the show with his charismatic personality and his confident attitude.He is highly skilled in Backend, DevOps, ML and Game Development.His love for Coding and Mangoes leave all of us nothing but flabbergasted and musing.");
+                $('#change-image').attr('src', 'assets/img/paritosh.jpeg');
+                $('#main-name').text("Paritosh Mahajan");
+                $('#main-text').text("Making machines learn what humans can't, Paritosh gives machines a hard time catching up.");
             }
         });
 

@@ -1,0 +1,249 @@
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: 'Karla', sans-serif;
+ }
+
+ /* Read More */
+ #more {
+     display: none;
+ }
+
+ /* 
+        Linking Fonts:
+        1) Segoe UI.
+        */
+
+ @font-face {
+     font-family: 'Segoe UI Regular';
+     font-style: normal;
+     font-weight: normal;
+     src: local('Segoe UI Regular'), url('assets/css/Segoe UI.woff') format('woff');
+ }
+
+
+ @font-face {
+     font-family: 'Segoe UI Italic';
+     font-style: normal;
+     font-weight: normal;
+     src: local('Segoe UI Italic'), url('assets/css/Segoe UI Italic.woff') format('woff');
+ }
+
+
+ @font-face {
+     font-family: 'Segoe UI Bold';
+     font-style: normal;
+     font-weight: normal;
+     src: local('Segoe UI Bold'), url('assets/css/Segoe UI Bold.woff') format('woff');
+ }
+
+
+ @font-face {
+     font-family: 'Segoe UI Bold Italic';
+     font-style: normal;
+     font-weight: normal;
+     src: local('Segoe UI Bold Italic'), url('assets/css/Segoe UI Bold Italic.woff') format('woff');
+ }
+
+ /* Pre-Loader */
+
+ @-webkit-keyframes bouncing-loader {
+     to {
+         -webkit-transform: translate3d(0, -1rem, 0);
+         transform: translate3d(0, -1rem, 0);
+     }
+ }
+
+ @keyframes bouncing-loader {
+     to {
+         -webkit-transform: translate3d(0, -1rem, 0);
+         transform: translate3d(0, -1rem, 0);
+     }
+ }
+
+ .bouncing-loader {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     position: fixed;
+     z-index: 999999999;
+     background: #fff;
+     width: 100%;
+     top: 0;
+ }
+
+ .bouncing-loader>div {
+     width: 1.5rem;
+     height: 1.5rem;
+     margin: 0.75rem;
+     background: #4285f4;
+     border-radius: 50%;
+     -webkit-animation: bouncing-loader 500ms infinite alternate;
+     animation: bouncing-loader 500ms infinite alternate;
+ }
+
+ .bouncing-loader>div:nth-child(2) {
+     background: #ea4335;
+     -webkit-animation-delay: 125ms;
+     animation-delay: 125ms;
+ }
+
+ .bouncing-loader>div:nth-child(3) {
+     background: #fbbc05;
+     -webkit-animation-delay: 250ms;
+     animation-delay: 250ms;
+ }
+
+ .bouncing-loader>div:nth-child(4) {
+     background: #34a853;
+     -webkit-animation-delay: 375ms;
+     animation-delay: 375ms;
+ }
+
+ /* Placeholder */
+
+ ::placeholder {
+     color: #2E4057;
+ }
+
+ /* Chevron */
+ .chevron-up {
+     position: fixed;
+     bottom: 5%;
+     right: 5%;
+ }
+
+ /* Animation */
+
+ .section2 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .section3 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .section4 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .section5 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .section6 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .social-footer {
+     animation-duration: 2s;
+     animation-delay: 1s;
+ }
+
+ /* Media Query */
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+     .rnd {
+         column-count: 1;
+     }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+     .rnd {
+         column-count: 1;
+     }
+ }
+
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+     .first_scale {
+         margin-top: 5vh;
+         margin-left: 5vh;
+         transform: scale(1.1);
+     }
+
+     .rnd {
+         column-count: 1;
+     }
+ }
+
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+     .first_scale {
+         margin-left: 15vh;
+         transform: scale(1.0);
+     }
+
+     .rnd2 {
+         column-count: 1;
+     }
+ }
+
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+     .first_scale {
+         margin-top: 12vh;
+         margin-left: 27vh;
+         transform: scale(1.4);
+     }
+
+     .rnd2 {
+         column-count: 1;
+     }
+ }
+
+
+ /* Cards */
+
+ .card-text {
+     color: white;
+     font-weight: normal;
+     font-size: 18px;
+     padding: 20px;
+     line-height: 2.3rem;
+ }
+
+ .card-title {
+     color: white;
+     font-weight: normal;
+     font-size: 25px;
+     line-height: 2.3rem;
+ }
+
+ .my-card {
+     background-color: #028BA8;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+
+ .rnd {
+     overflow: hidden;
+     height: 580px;
+     min-height: 450px;
+     max-width: 270px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 20px;
+     border: none;
+ }
+
+ .rnd2 {
+     overflow: hidden;
+     min-height: 450px;
+     height: 580px;
+     max-width: 270px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 20px;
+     border: none;
+ }
