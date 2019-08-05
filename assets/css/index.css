@@ -63,7 +63,9 @@
 
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
-     .rnd {
+
+     .rnd,
+     .rn2 {
          column-count: 1;
      }
 
@@ -82,7 +84,9 @@
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
-     .rnd {
+
+     .rnd,
+     .rn2 {
          column-count: 1;
      }
 
@@ -102,6 +106,11 @@
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
 
+     .rnd,
+     .rn2 {
+         column-count: 1;
+     }
+
      .first_scale h1 {
          font-size: 59px;
      }
@@ -118,6 +127,11 @@
  /* Large devices (laptops/desktops, 992px and up) */
  @media only screen and (min-width: 992px) {
 
+     .rnd,
+     .rn2 {
+         column-count: 1;
+     }
+
      .first_scale h1 {
          font-size: 62px;
      }
@@ -133,6 +147,11 @@
 
  /* Extra large devices (large laptops and desktops, 1200px and up) */
  @media only screen and (min-width: 1200px) {
+
+     .rnd,
+     .rn2 {
+         column-count: 1;
+     }
 
      .first_scale h1 {
          font-size: 85px;
@@ -171,26 +190,24 @@
      border-bottom-right-radius: 10px;
  }
 
- .rnd {
-     overflow: hidden;
-     height: 580px;
-     min-height: 450px;
-     max-width: 300px;
-     margin-left: auto;
-     margin-right: auto;
-     margin-top: 20px;
-     border: none;
- }
-
+ .rnd,
  .rnd2 {
      overflow: hidden;
+     height: 550px;
      min-height: 450px;
-     height: 580px;
-     max-width: 300px;
+     min-width: 250px;
+     max-width: 330px;
      margin-left: auto;
      margin-right: auto;
      margin-top: 20px;
      border: none;
+     padding: 15px;
+ }
+
+ .scroll-box {
+     overflow-y: scroll;
+     height: 400px;
+     margin-bottom: 3vh;
  }
 
 
