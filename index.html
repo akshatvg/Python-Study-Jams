@@ -523,7 +523,7 @@
                 <div class="d-inline col-md-5 text-center text-md-left">
                     <h2 class="text-center" style="font-weight: bold;margin-bottom: 40px;">REGISTER</h2>
                     <h6 class="response"></h6>
-                    <form id="my_form" name="registrationForm" class="signup" style="padding: 18px;">
+                    <div id="my_form" name="registrationForm" class="signup" style="padding: 18px;">
                         <div class="form-group">
                             <input type="text" class="form_control" id="first_name" placeholder="First Name"
                                 name="first_name"
@@ -562,7 +562,7 @@
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                    </form>
+                    </div>
                     <div class="row justify-content-center">
                         <input type="submit" class="btn mx-auto" id="sbtns"
                             style="color: white; background-color: #048BA8;border-radius: 36px;font-size: 15px;width: 120px;margin-top:30px;font-weight: bold"
@@ -718,8 +718,9 @@
         });
     </script>
 
-    <script>
 
+    <script>
+        //Validation
         window.onload = function () {
             document.getElementById("sbtns").addEventListener("click", function () {
                 let first_name = document.getElementById("first_name").value;
@@ -729,141 +730,74 @@
                 let email = document.getElementById("email").value;
                 let gender = document.getElementById("gender").value;
 
-                let status = [];
-
-                // Email Validation 
-
-                let emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-
-                if (false) {
-                    // Validation Failed
-                    document.getElementById("email").style.borderColor = "red";
-                    document.getElementById("email").value = "";
-                    document.getElementById("email").placeholder = "Please enter valid email";
-
-                    status.push("false");
-
-                } else {
-                    if (emailRegex.test(email.trim())) {
-                        status.push("true");
-                    }
+                if (first_name == "") {
+                    alert("Please enter your first name.");
+                    return false;
                 }
 
-                //First Name Validation
-                if (false) {
-                    var len1 = first_name.length;
-                    if (len1 <= 5) {
-                        status.push("false");
-                    }
-                    // Validation Failed
-                    document.getElementById("first_name").style.borderColor = "red";
-                    document.getElementById("first_name").value = "";
-                    document.getElementById("first_name").placeholder = "Please enter valid first name";
-                    status.push("false");
-                } else {
-                    status.push("true");
+                if (last_name == "") {
+                    alert("Please enter your last name.");
+                    return false;
                 }
 
-                //Number Validation
-                if (false) {
-                    var len1 = phone.length;
-                    if (len1 <= 9) {
-                        status.push("false");
-                    }
-                    // Validation Failed
-                    document.getElementById("phone").style.borderColor = "red";
-                    document.getElementById("phone").value = "";
-                    document.getElementById("phone").placeholder = "Please enter valid number";
-                    status.push("false");
-                } else {
-                    status.push("true");
+                if (email == "") {
+                    alert("Please enter a valid e-mail address.");
+                    return false;
                 }
 
-                //Registration Number Validation
-                if (false) {
-                    var len1 = reg_no.length;
-                    if (len1 <= 8) {
-                        status.push("false");
-                    }
-                    // Validation Failed
-                    document.getElementById("reg_no").style.borderColor = "red";
-                    document.getElementById("reg_no").value = "";
-                    document.getElementById("reg_no").placeholder = "Please enter valid registration number";
-                    status.push("false");
-                } else {
-                    status.push("true");
+                if (email.indexOf("@", 0) < 0) {
+                    alert("Please enter a valid e-mail address.");
+                    return false;
                 }
 
-                //Last Name Validation
-                if (false) {
-                    var len2 = last_name.length;
-                    if (len2 <= 5) {
-                        status.push("false");
-                    }
-                    // Validation Failed
-                    document.getElementById("last_name").style.borderColor = "red";
-                    document.getElementById("last_name").value = "";
-                    document.getElementById("last_name").placeholder = "Please enter valid last name";
-                    status.push("false");
-                    document.getElementById("first_name").classList.add("red");
-                    document.getElementById("last_name").classList.add("red");
-                    document.getElementById("email").classList.add("red");
-                    document.getElementById("phone").classList.add("red");
-                    document.getElementById("reg_no").classList.add("red");
-                } else {
-                    status.push("true");
+                if (email.indexOf(".", 0) < 0) {
+                    alert("Please enter a valid e-mail address.");
+                    return false;
                 }
 
-                if (status.includes("false")) {
-                    console.log("There was some error while validating")
-                    return ("false");
+                if (mob_no == "") {
+                    alert("Please enter your telemob_no number.");
+                    return false;
                 }
-                else {
-                    console.log("Validated");
-                    document.getElementById("sbtns").value = "Loading...";
 
-                    //Form
-                    //Google reCaptcha
-                    grecaptcha.ready(function () {
-                        grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
-                            fetch("https://python-study-jams.herokuapp.com/new", {
-                                mode: 'no-cors',
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify({
-                                    first_name: first_name,
-                                    last_name: last_name,
-                                    mob_no: mob_no,
-                                    reg_no: reg_no,
-                                    email: email,
-                                    gender: gender,
-                                    token: token
-                                }),
-                            })
-                                .then(function (response) {
-                                    return response.json();
-                                    console.log(response);
-                                })
-                                .catch(function (err) {
-                                    console.log("Error In Submitting");
-                                })
+                if (reg_no == "") {
+                    alert("Please enter your registration number.");
+                    return false;
+                }
+
+                return true;
+
+                //Form
+                //Google reCaptcha
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
+                        fetch("https://python-study-jams.herokuapp.com/new", {
+                            mode: 'no-cors',
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                first_name: first_name,
+                                last_name: last_name,
+                                mob_no: mob_no,
+                                reg_no: reg_no,
+                                email: email,
+                                gender: gender,
+                                token: token
+                            }),
                         })
+                            .then(function (response) {
+                                return response.json();
+                                console.log(response);
+                            })
+                            .catch(function (err) {
+                                console.log("Error In Submitting");
+                            })
                     })
-                }
-
-                function focus() {
-                    document.getElementById(email).style.borderColor = "#F18F01";
-                    document.getElementById(first_name).style.borderColor = "#F18F01";
-                    document.getElementById(last_name).style.borderColor = "#F18F01";
-                    document.getElementById(phone).style.borderColor = "#F18F01";
-                    document.getElementById(reg_no).style.borderColor = "#F18F01";
-                    document.getElementById("sbtns").value = "Register";
-                }
+                })
             });
         }
-
     </script>
 
 </body>
