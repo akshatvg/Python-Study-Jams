@@ -65,16 +65,16 @@
          column-count: 1;
      }
 
-     .first_scale {
-         transform: scale(1.0);
-     }
-
      .first_scale h1 {
          font-size: 59px;
      }
 
      .see-how {
          font-size: 50px;
+     }
+
+     .img1 {
+         height: 20vh;
      }
  }
 
@@ -84,24 +84,21 @@
          column-count: 1;
      }
 
-     .first_scale {
-         transform: scale(1.0);
-     }
-
      .first_scale h1 {
          font-size: 59px;
      }
 
      .see-how {
          font-size: 50px;
+     }
+
+     .img1 {
+         height: 20vh;
      }
  }
 
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
-     .first_scale {
-         transform: scale(1.0);
-     }
 
      .first_scale h1 {
          font-size: 59px;
@@ -110,13 +107,14 @@
      .see-how {
          font-size: 50px;
      }
+
+     .img1 {
+         height: 25vh;
+     }
  }
 
  /* Large devices (laptops/desktops, 992px and up) */
  @media only screen and (min-width: 992px) {
-     .first_scale {
-         transform: scale(1.0);
-     }
 
      .first_scale h1 {
          font-size: 62px;
@@ -125,22 +123,25 @@
      .see-how {
          font-size: 55px;
      }
+
+     .img1 {
+         height: 28vh;
+     }
  }
 
  /* Extra large devices (large laptops and desktops, 1200px and up) */
  @media only screen and (min-width: 1200px) {
-     .first_scale {
-         margin-left: 15vh;
-         margin-top: 5vh;
-         transform: scale(1.4);
-     }
 
      .first_scale h1 {
-         font-size: 65px;
+         font-size: 85px;
      }
 
      .see-how {
-         font-size: 54px;
+         font-size: 60px;
+     }
+
+     .img1 {
+         height: 40vh;
      }
  }
 
