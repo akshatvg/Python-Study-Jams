@@ -22,6 +22,7 @@
      position: fixed;
      bottom: 5%;
      right: 5%;
+     z-index: 100;
  }
 
  /* Animation */
@@ -228,6 +229,37 @@
  }
  */
 
- .fixed-top{
+ /* Navbar */
+
+ .fixed-top {
      position: relative;
+ }
+
+
+ /* Form */
+
+ .input-glyph {
+     position: absolute;
+     color: green;
+     right: 10px;
+     pointer-events: none;
+     top: 10px;
+     display: none;
+ }
+
+ .form-control.valid~.input-glyph,
+ .form-control.valid:invalid~.input-glyph {
+     display: block;
+ }
+
+ .form-control.valid~.input-glyph {
+     display: block;
+ }
+
+ .form-control.valid:invalid~.input-glyph {
+     display: none;
+ }
+
+ .form-control:valid~.input-glyph {
+     display: block;
  }
