@@ -6,8 +6,6 @@
     <!--Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description"
-        content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
     <meta name="keywords"
         content="DSC,VIT,Developer Student Clubs,Python Study Jams,Workshops,Tech,Technical,Club,Chapter,Developer101">
     <meta name="author" content="Akshat Gupta">
@@ -25,21 +23,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Developer 101 by DSC VIT">
-    <meta property="og:description"
+
+    <!--
+        <meta property="og:description"
         content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
-    <meta property="og:url" content="https://python.dscvit.com">
-    <meta property="og:site_name" content="Python Study Jam by DSC VIT">
+        <meta property="og:url" content="https://python.dscvit.com">
+        <meta itemprop="description"
+        content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
+        <meta name="twitter:description"
+        content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
+        <meta name="description"
+        content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
+        <link rel="canonical" href="https://python.dscvit.com">
+    -->
+
+    <meta property="og:site_name" content="Developer 101 by DSC VIT">
     <meta name="twitter:card" content="website">
     <meta name="twitter:site" content="Developer 101 by DSC VIT">
     <meta name="twitter:title" content="Developer 101 by DSC VIT">
-    <meta name="twitter:description"
-        content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
     <meta name="twitter:creator" content="@dscvit">
     <meta itemprop="name" content="Developer 101 by DSC VIT">
-    <meta itemprop="description"
-        content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
-
-    <link rel="canonical" href="https://python.dscvit.com">
 
     <!--Linking Favicon, Fonts, Bootstrap, Font Awesome, Animate, reCaptcha, CSS-->
     <link rel="icon" href="assets/img/favicon.png">
@@ -811,7 +814,37 @@
                 }
                 else {
                     console.log("Validated");
-                    document.getElementById("sbtns").value = "Loading..."
+                    document.getElementById("sbtns").value = "Loading...";
+
+                    //Form
+                    //Google reCaptcha
+                    grecaptcha.ready(function () {
+                        grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
+                            fetch("https://python-study-jams.herokuapp.com/new", {
+                                mode: 'no-cors',
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                    first_name: first_name,
+                                    last_name: last_name,
+                                    mob_no: mob_no,
+                                    reg_no: reg_no,
+                                    email: email,
+                                    gender: gender,
+                                    token: token
+                                }),
+                            })
+                                .then(function (response) {
+                                    return response.json();
+                                    console.log(response);
+                                })
+                                .catch(function (err) {
+                                    console.log("Error In Submitting");
+                                })
+                        })
+                    })
                 }
 
                 function focus() {
@@ -820,10 +853,10 @@
                     document.getElementById(last_name).style.borderColor = "#F18F01";
                     document.getElementById(phone).style.borderColor = "#F18F01";
                     document.getElementById(reg_no).style.borderColor = "#F18F01";
+                    document.getElementById("sbtns").value = "Register";
                 }
             });
         }
-
 
     </script>
 
