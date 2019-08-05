@@ -227,3 +227,7 @@
      overflow: hidden;
  }
  */
+
+ .fixed-top{
+     position: relative;
+ }

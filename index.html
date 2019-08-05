@@ -48,7 +48,8 @@
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+        defer>
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -247,7 +248,7 @@
                 class="text-center">Sessions
             </h2>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" style="margin-right: 0px;margin-left:0px;">
 
                 <div class="col-12 col-md-4">
                     <div class="card rnd" style="width: 270px;border-radius: 20px;">
@@ -487,7 +488,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <a href="https://www.digitalocean.com" target="_blank"><img class="social-circle"
-                                src="assets/img/digital-ocean.webp" alt="Digital Ocean"></img></a>
+                                src="assets/img/digital-ocean.jpg" alt="Digital Ocean"></img></a>
                         <a href="https://www.heroku.com" target="_blank"><img class="social-circle"
                                 src="assets/img/heroku.png" alt="Heroku"></img></a>
                         <a href="https://www.linux.org/" target="_blank"><img class="social-circle"
@@ -707,77 +708,77 @@
     <script>
 
         window.onload = function () {
-            // document.getElementById("sbtns").addEventListener("click", function () {
-            //     let first_name = document.getElementById("first_name").value;
-            //     let last_name = document.getElementById("last_name").value;
-            //     let mob_no = document.getElementById("mob_no").value;
-            //     let reg_no = document.getElementById("reg_no").value;
-            //     let email = document.getElementById("email").value;
-            //     let gender = document.getElementById("gender").value;
+            document.getElementById("sbtns").addEventListener("click", function () {
+                let first_name = document.getElementById("first_name").value;
+                let last_name = document.getElementById("last_name").value;
+                let mob_no = document.getElementById("mob_no").value;
+                let reg_no = document.getElementById("reg_no").value;
+                let email = document.getElementById("email").value;
+                let gender = document.getElementById("gender").value;
 
 
-            //     //Validation
+                //Validation
 
-            //     function toggleFormValid() {
-            //         var firstname = document.getElementById('first_name').value;
-            //         var lastname = document.getElementById('last_name').value;
-            //         var phone = document.getElementById('phone').value;
-            //         var btn = document.getElementById('sbtns').value;
-            //         if (name == '' || mail == '' || phone == '' || msg == '') {
-            //             document.getElementById('sbtns').disabled = true;
-            //             console.log("Invalid");
-            //         } else {
-            //             document.getElementById("sbtns").disabled = false;
-            //             console.log("Valid!");
-            //         }
-            //     }
-            //     function Validation() {
+                function toggleFormValid() {
+                    var firstname = document.getElementById('first_name').value;
+                    var lastname = document.getElementById('last_name').value;
+                    var phone = document.getElementById('phone').value;
+                    var btn = document.getElementById('sbtns').value;
+                    if (name == '' || mail == '' || phone == '' || msg == '') {
+                        document.getElementById('sbtns').disabled = true;
+                        console.log("Invalid");
+                    } else {
+                        document.getElementById("sbtns").disabled = false;
+                        console.log("Valid!");
+                    }
+                }
+                function Validation() {
 
-            //         var btn = document.getElementById('sbtns').value;
-            //         if (firstname == '' || lastname == '' || email == '' || phone == '') {
-            //             alert('All Fields Are Required');
-            //         }
-            //         if (!isValidfirstname(firstname)) {
-            //             alert('Invalid First Name');
-            //             document.getElementById("sbtns").disabled = true;
-            //         }
-            //         if (!isValidlastname(lastname)) {
-            //             alert('Invalid Last Name');
-            //             document.getElementById("sbtns").disabled = true;
-            //         }
-            //         if (!isValidemail(email)) {
-            //             alert('Invalid E-Mail Id');
-            //             document.getElementById("sbtns").disabled = true;
-            //         }
-            //         if (!isValidphone(phone)) {
-            //             alert('Invalid Phone Number');
-            //             document.getElementById("sbtns").disabled = true;
-            //         }
-            //         //    if (!isValidregno(regno)) {
-            //         //        alert('Invalid Registration Number');
-            //         //        document.getElementById("sbtns").disabled = true;
-            //         //    }
-            //     }
-            //     // function isValidfirstname(firstname) {
-            //     //     var regex = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/;
-            //     //     return regex.test(firstname);
-            //     // }
-            //     // function isValidlastname(lastname) {
-            //     //     var regex = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/;
-            //     //     return regex.test(lastname);
-            //     // }
-            //     function isValidemail(email) {
-            //         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            //         return regex.test(mail);
-            //     }
-            //     function isValidphone(phone) {
-            //         var regex = /^(\+\d{1,2})?\(?\d{3}\)?\d{3}\d{4}$/;
-            //         return regex.test(phone);
-            //     }
-            //     //function isValidregno(regno) {
-            //     //    var regex = /^([1])+\([5-9])+\[A-Za-z]{3}+([0-9]{4})$/;
-            //     //    return regex.test(regno);
-            //     //}
+                    var btn = document.getElementById('sbtns').value;
+                    if (firstname == '' || lastname == '' || email == '' || phone == '') {
+                        alert('All Fields Are Required');
+                    }
+                    if (!isValidfirstname(firstname)) {
+                        alert('Invalid First Name');
+                        document.getElementById("sbtns").disabled = true;
+                    }
+                    if (!isValidlastname(lastname)) {
+                        alert('Invalid Last Name');
+                        document.getElementById("sbtns").disabled = true;
+                    }
+                    if (!isValidemail(email)) {
+                        alert('Invalid E-Mail Id');
+                        document.getElementById("sbtns").disabled = true;
+                    }
+                    if (!isValidphone(phone)) {
+                        alert('Invalid Phone Number');
+                        document.getElementById("sbtns").disabled = true;
+                    }
+                    //    if (!isValidregno(regno)) {
+                    //        alert('Invalid Registration Number');
+                    //        document.getElementById("sbtns").disabled = true;
+                    //    }
+                }
+                // function isValidfirstname(firstname) {
+                //     var regex = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/;
+                //     return regex.test(firstname);
+                // }
+                // function isValidlastname(lastname) {
+                //     var regex = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/;
+                //     return regex.test(lastname);
+                // }
+                function isValidemail(email) {
+                    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    return regex.test(mail);
+                }
+                function isValidphone(phone) {
+                    var regex = /^(\+\d{1,2})?\(?\d{3}\)?\d{3}\d{4}$/;
+                    return regex.test(phone);
+                }
+                //function isValidregno(regno) {
+                //    var regex = /^([1])+\([5-9])+\[A-Za-z]{3}+([0-9]{4})$/;
+                //    return regex.test(regno);
+                //}
 
 
             //Form
@@ -786,6 +787,7 @@
             grecaptcha.ready(function () {
                 grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
                     fetch("https://python-study-jams.herokuapp.com/new", {
+                        mode: 'no-cors',
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -802,6 +804,7 @@
                     })
                         .then(function (response) {
                             return response.json();
+                            console.log(response);
                         })
                         .then(function (res) {
                             console.log(res);
