@@ -1,0 +1,247 @@
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: 'Karla', sans-serif;
+ }
+
+ /* Read More */
+ #more {
+     display: none;
+ }
+
+ /* Placeholder */
+
+ ::placeholder {
+     color: #2E4057;
+ }
+
+ /* Chevron */
+ .chevron-up {
+     position: fixed;
+     bottom: 5%;
+     right: 5%;
+     z-index: 100;
+ }
+
+ /* Animation */
+
+ .section2 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .section3 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .section4 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .section5 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .section6 {
+     animation-duration: 5s;
+     animation-delay: 2s;
+ }
+
+ .social-footer {
+     animation-duration: 2s;
+     animation-delay: 1s;
+ }
+
+ /* Media Query */
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+     .rnd {
+         column-count: 1;
+     }
+
+     .first_scale {
+         transform: scale(1.0);
+     }
+
+     .first_scale h1 {
+         font-size: 59px;
+     }
+
+     .see-how {
+         font-size: 50px;
+     }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+     .rnd {
+         column-count: 1;
+     }
+
+     .first_scale {
+         transform: scale(1.0);
+     }
+
+     .first_scale h1 {
+         font-size: 59px;
+     }
+
+     .see-how {
+         font-size: 50px;
+     }
+ }
+
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+     .first_scale {
+         transform: scale(1.0);
+     }
+
+     .first_scale h1 {
+         font-size: 59px;
+     }
+
+     .see-how {
+         font-size: 50px;
+     }
+ }
+
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+     .first_scale {
+         transform: scale(1.0);
+     }
+
+     .first_scale h1 {
+         font-size: 62px;
+     }
+
+     .see-how {
+         font-size: 55px;
+     }
+ }
+
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+     .first_scale {
+         margin-left: 15vh;
+         margin-top: 5vh;
+         transform: scale(1.4);
+     }
+
+     .first_scale h1 {
+         font-size: 65px;
+     }
+
+     .see-how {
+         font-size: 54px;
+     }
+ }
+
+
+ /* Cards */
+
+ .card-text {
+     color: white;
+     font-weight: normal;
+     font-size: 18px;
+     padding: 20px;
+     line-height: 2.3rem;
+ }
+
+ .card-title {
+     color: white;
+     font-weight: normal;
+     font-size: 25px;
+     line-height: 2.3rem;
+ }
+
+ .my-card {
+     background-color: #028BA8;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+
+ .rnd {
+     overflow: hidden;
+     height: 580px;
+     min-height: 450px;
+     max-width: 300px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 20px;
+     border: none;
+ }
+
+ .rnd2 {
+     overflow: hidden;
+     min-height: 450px;
+     height: 580px;
+     max-width: 300px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 20px;
+     border: none;
+ }
+
+
+ /* Social Circle */
+
+ .social-circle {
+     height: 100px;
+     width: 100px;
+     margin-top: 5vh;
+     margin-left: 1vw;
+     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+     border-radius: 50%;
+     display: inline-block;
+     background-color: white;
+     padding: 6px;
+     border: 4px solid black;
+     margin-left: 5vh;
+     margin-right: 5vh;
+ }
+
+
+ /* Spacing of Illustrators */
+
+ .spacing-class {
+     margin-left: 4vh;
+     margin-right: 4vh;
+ }
+
+ /*
+ .section1,
+ .section2,
+ .section3,
+ .section4,
+ .section5,
+ .section6,
+ .section7,
+ .social-footer {
+     overflow: hidden;
+ }
+ */
+
+ /* Navbar */
+
+ .fixed-top {
+     position: relative;
+ }
+
+
+ /* Form */
+
+ .red::placeholder {
+     color: red;
+ }
+
+ input:focus {
+     outline: none;
+ }
