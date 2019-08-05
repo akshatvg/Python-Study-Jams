@@ -9,7 +9,7 @@
     <meta name="description"
         content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
     <meta name="keywords"
-        content="DSC,VIT,Developer Student Clubs,Python Study Jams,Workshops,Tech,Technical,Club,Chapter">
+        content="DSC,VIT,Developer Student Clubs,Python Study Jams,Workshops,Tech,Technical,Club,Chapter,Developer101">
     <meta name="author" content="Akshat Gupta">
     <meta name="copyright" content="DSC VIT Vellore">
     <meta name="language" content="en">
@@ -21,21 +21,21 @@
     <meta name="og:mob_no_number" content="+919600093179" />
     <meta name="og:country-name" content="India" />
     <meta name="og:region" content="Tamil Nadu" />
-    <meta name="og:site_name" content="Python Study Jams by DSC VIT" />
+    <meta name="og:site_name" content="Developer 101 by DSC VIT" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Python Study Jams by DSC VIT">
+    <meta property="og:title" content="Developer 101 by DSC VIT">
     <meta property="og:description"
         content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
     <meta property="og:url" content="https://python.dscvit.com">
     <meta property="og:site_name" content="Python Study Jam by DSC VIT">
     <meta name="twitter:card" content="website">
-    <meta name="twitter:site" content="Python Study Jams by DSC VIT">
-    <meta name="twitter:title" content="Python Study Jams by DSC VIT">
+    <meta name="twitter:site" content="Developer 101 by DSC VIT">
+    <meta name="twitter:title" content="Developer 101 by DSC VIT">
     <meta name="twitter:description"
         content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
     <meta name="twitter:creator" content="@dscvit">
-    <meta itemprop="name" content="Python Study Jams by DSC VIT">
+    <meta itemprop="name" content="Developer 101 by DSC VIT">
     <meta itemprop="description"
         content="Python Study Jams are workshops conducted by DSC VIT to teach the most developer friendly language, Python.">
 
@@ -520,26 +520,29 @@
                 <div class="d-inline col-md-5 text-center text-md-left">
                     <h2 class="text-center" style="font-weight: bold;margin-bottom: 40px;">REGISTER</h2>
                     <h6 class="response"></h6>
-                    <div id="my_form" name="registrationForm" class="signup" style="padding: 18px;">
+                    <form id="my_form" name="registrationForm" class="signup" style="padding: 18px;">
                         <div class="form-group">
                             <input type="text" class="form_control" id="first_name" placeholder="First Name"
-                                name="first_name" style="border: 3px solid #F18F01;border-radius: 36px;" required>
+                                name="first_name" style="border: 3px solid #F18F01;border-radius: 36px;" required
+                                onfocus="focus();">
                         </div>
                         <div class="form-group">
                             <input type="text" class="form_control" id="last_name" placeholder="Last Name"
-                                name="last_name" style="border: 3px solid #F18F01;border-radius: 36px;" required>
+                                name="last_name" style="border: 3px solid #F18F01;border-radius: 36px;" required
+                                onfocus="focus();">
                         </div>
                         <div class="form-group">
                             <input type="text" class="form_control" id="reg_no" placeholder="Registration Number"
-                                name="reg_no" style="border: 3px solid #F18F01;border-radius: 36px;" required>
+                                name="reg_no" style="border: 3px solid #F18F01;border-radius: 36px;" required
+                                onfocus="focus();">
                         </div>
                         <div class="form-group">
                             <input type="tel" class="form_control" id="mob_no" placeholder="Mobile Number" name="mob_no"
-                                style="border: 3px solid #F18F01;border-radius: 36px;" required>
+                                style="border: 3px solid #F18F01;border-radius: 36px;" required onfocus="focus();">
                         </div>
                         <div class="form-group">
                             <input type="email" class="form_control" id="email" placeholder="Email" name="email"
-                                style="border: 3px solid #F18F01;border-radius: 36px;" required>
+                                style="border: 3px solid #F18F01;border-radius: 36px;" required onfocus="focus();">
                         </div>
                         <div class="form-group">
                             <select class="custom-select" style="border: 3px solid #F18F01;border-radius: 36px;"
@@ -547,17 +550,18 @@
                                 <option selected>Gender</option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
+                                <option value="other">Other</option>
                             </select>
                         </div>
-                        </form>
-                        <div class="row justify-content-center">
-                            <input type="submit" class="btn mx-auto" id="sbtns"
-                                style="color: white; background-color: #048BA8;border-radius: 36px;font-size: 15px;width: 120px;margin-top:30px;font-weight: bold"
-                                value="REGISTER">
-                        </div>
+                    </form>
+                    <div class="row justify-content-center">
+                        <input type="submit" class="btn mx-auto" id="sbtns"
+                            style="color: white; background-color: #048BA8;border-radius: 36px;font-size: 15px;width: 120px;margin-top:30px;font-weight: bold"
+                            value="REGISTER">
                     </div>
                 </div>
             </div>
+        </div>
 
     </section>
 
@@ -716,88 +720,110 @@
                 let email = document.getElementById("email").value;
                 let gender = document.getElementById("gender").value;
 
-                let status = []
+                let status = [];
+
+                // Email Validation 
+
+                let emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
                 if (false) {
-                    document.getElementById("email").style.borderColor = "red"
+                    // Validation Failed
+                    document.getElementById("email").style.borderColor = "red";
                     document.getElementById("email").value = "";
-                    document.getElementById("email").placeholder = "red color"
-                    status.push(false);
-                    function change_placeholder_color(form_control, red) {
-                        $("body").append("<style>" + form - control + "::placeholder{color:" + red + "}</style>")
-                    }
+                    document.getElementById("email").placeholder = "Please enter valid email";
+
+                    status.push("false");
 
                 } else {
-
-                    status.push(true);
-
-                }
-
-                if (true) {
-
-                    //Form
-
-                    //Google reCaptcha
-                    grecaptcha.ready(function () {
-                        grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
-                            fetch("https://python-study-jams.herokuapp.com/new", {
-                                mode: 'no-cors',
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify({
-                                    first_name: first_name,
-                                    last_name: last_name,
-                                    mob_no: mob_no,
-                                    reg_no: reg_no,
-                                    email: email,
-                                    gender: gender,
-                                    token: token
-                                }),
-                            })
-                                .then(function (response) {
-                                    return response.json();
-                                    console.log(response);
-                                })
-                                .then(function (res) {
-                                    console.log(res);
-                                })
-                                .catch(function (err) {
-                                    console.log(err);
-                                });
-                        })
-                    })
-                }
-
-                else {
-
-                    return false;
-                }
-
-                //Validation
-
-                var emailPattern = new RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
-
-                function validateForm() {
-
-                    var regErr = emailErr = true;
-
-                    // Validate email address
-                    if (email == "") {
-                        printError("emailErr", "Please enter your email address");
-                    } else {
-                        // Regular expression for basic email validation
-                        var regex = /^\S+@\S+\.\S+$/;
-                        if (regex.test(logemail) === false) {
-                            printError("emailErr", "Please enter a valid email address");
-                        } else {
-                            printError("emailErr", "");
-                            emailErr = false;
-                        }
+                    if (emailRegex.test(email.trim())) {
+                        status.push("true");
                     }
-                });
-            }
+                }
+
+                //First Name Validation
+                if (false) {
+                    var len1 = first_name.length;
+                    if (len1 <= 5) {
+                        status.push("false");
+                    }
+                    // Validation Failed
+                    document.getElementById("first_name").style.borderColor = "red";
+                    document.getElementById("first_name").value = "";
+                    document.getElementById("first_name").placeholder = "Please enter valid first name";
+                    status.push("false");
+                } else {
+                    status.push("true");
+                }
+
+                //Number Validation
+                if (false) {
+                    var len1 = phone.length;
+                    if (len1 <= 9) {
+                        status.push("false");
+                    }
+                    // Validation Failed
+                    document.getElementById("phone").style.borderColor = "red";
+                    document.getElementById("phone").value = "";
+                    document.getElementById("phone").placeholder = "Please enter valid number";
+                    status.push("false");
+                } else {
+                    status.push("true");
+                }
+
+                //Registration Number Validation
+                if (false) {
+                    var len1 = reg_no.length;
+                    if (len1 <= 8) {
+                        status.push("false");
+                    }
+                    // Validation Failed
+                    document.getElementById("reg_no").style.borderColor = "red";
+                    document.getElementById("reg_no").value = "";
+                    document.getElementById("reg_no").placeholder = "Please enter valid registration number";
+                    status.push("false");
+                } else {
+                    status.push("true");
+                }
+
+                //Last Name Validation
+                if (false) {
+                    var len2 = last_name.length;
+                    if (len2 <= 5) {
+                        status.push("false");
+                    }
+                    // Validation Failed
+                    document.getElementById("last_name").style.borderColor = "red";
+                    document.getElementById("last_name").value = "";
+                    document.getElementById("last_name").placeholder = "Please enter valid last name";
+                    status.push("false");
+                    document.getElementById("first_name").classList.add("red");
+                    document.getElementById("last_name").classList.add("red");
+                    document.getElementById("email").classList.add("red");
+                    document.getElementById("phone").classList.add("red");
+                    document.getElementById("reg_no").classList.add("red");
+                } else {
+                    status.push("true");
+                }
+
+                if (status.includes("false")) {
+                    console.log("There was some error while validating")
+                    return ("false");
+                }
+                else {
+                    console.log("Validated");
+                    document.getElementById("sbtns").value = "Loading..."
+                }
+
+                function focus() {
+                    document.getElementById(email).style.borderColor = "#F18F01";
+                    document.getElementById(first_name).style.borderColor = "#F18F01";
+                    document.getElementById(last_name).style.borderColor = "#F18F01";
+                    document.getElementById(phone).style.borderColor = "#F18F01";
+                    document.getElementById(reg_no).style.borderColor = "#F18F01";
+                }
+            });
+        }
+
 
     </script>
 
