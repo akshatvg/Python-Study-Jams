@@ -232,8 +232,7 @@
  /* Spacing of Illustrators */
 
  .spacing-class {
-     margin-left: 4vh;
-     margin-right: 4vh;
+     padding: 4vh;
  }
 
  /*
