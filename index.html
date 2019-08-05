@@ -520,38 +520,26 @@
                 <div class="d-inline col-md-5 text-center text-md-left">
                     <h2 class="text-center" style="font-weight: bold;margin-bottom: 40px;">REGISTER</h2>
                     <h6 class="response"></h6>
-                    <form id="my_form" name="registrationForm" class="signup" style="padding: 18px;"
-                        onsubmit="return validateForm(this);">
+                    <div id="my_form" name="registrationForm" class="signup" style="padding: 18px;">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="first_name" placeholder="First Name"
-                                name="first_name" style="border: 3px solid #F18F01;border-radius: 36px;" required
-                                oninput="return validateRequired(this);" onchange="return validateRequired(this);"
-                                title="First name is required.">
-                            <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+                            <input type="text" class="form_control" id="first_name" placeholder="First Name"
+                                name="first_name" style="border: 3px solid #F18F01;border-radius: 36px;" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="last_name" placeholder="Last Name"
-                                name="last_name" style="border: 3px solid #F18F01;border-radius: 36px;" required
-                                oninput="return validateRequired(this);" onchange="return validateRequired(this);"
-                                title="Last name is required.">
-                            <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+                            <input type="text" class="form_control" id="last_name" placeholder="Last Name"
+                                name="last_name" style="border: 3px solid #F18F01;border-radius: 36px;" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="reg_no" placeholder="Registration Number"
-                                name="reg_no" style="border: 3px solid #F18F01;border-radius: 36px;" required
-                                title="Registration number is required.">
+                            <input type="text" class="form_control" id="reg_no" placeholder="Registration Number"
+                                name="reg_no" style="border: 3px solid #F18F01;border-radius: 36px;" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" id="mob_no" placeholder="Mobile Number" name="mob_no"
-                                style="border: 3px solid #F18F01;border-radius: 36px;" required
-                                title="Mobile number is required.">
+                            <input type="tel" class="form_control" id="mob_no" placeholder="Mobile Number" name="mob_no"
+                                style="border: 3px solid #F18F01;border-radius: 36px;" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="email"
-                                style="border: 3px solid #F18F01;border-radius: 36px;" required
-                                oninput="return validateEmail(this);" onchange="return validateEmai(this);"
-                                pattern="^.{0,64}$" title="Email is required.">
-                            <i class="input-glyph glyphicon glyphicon-ok-circle"></i>
+                            <input type="email" class="form_control" id="email" placeholder="Email" name="email"
+                                style="border: 3px solid #F18F01;border-radius: 36px;" required>
                         </div>
                         <div class="form-group">
                             <select class="custom-select" style="border: 3px solid #F18F01;border-radius: 36px;"
@@ -561,15 +549,15 @@
                                 <option value="female">Female</option>
                             </select>
                         </div>
-                    </form>
-                    <div class="row justify-content-center">
-                        <input type="submit" class="btn mx-auto" id="sbtns"
-                            style="color: white; background-color: #048BA8;border-radius: 36px;font-size: 15px;width: 120px;margin-top:30px;font-weight: bold"
-                            value="REGISTER">
+                        </form>
+                        <div class="row justify-content-center">
+                            <input type="submit" class="btn mx-auto" id="sbtns"
+                                style="color: white; background-color: #048BA8;border-radius: 36px;font-size: 15px;width: 120px;margin-top:30px;font-weight: bold"
+                                value="REGISTER">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
     </section>
 
@@ -728,113 +716,87 @@
                 let email = document.getElementById("email").value;
                 let gender = document.getElementById("gender").value;
 
+                let status = []
+
+                if (false) {
+                    document.getElementById("email").style.borderColor = "red"
+                    document.getElementById("email").value = "";
+                    document.getElementById("email").placeholder = "red color"
+                    status.push(false);
+                    function change_placeholder_color(form_control, red) {
+                        $("body").append("<style>" + form - control + "::placeholder{color:" + red + "}</style>")
+                    }
+
+                } else {
+
+                    status.push(true);
+
+                }
+
+                if (true) {
+
+                    //Form
+
+                    //Google reCaptcha
+                    grecaptcha.ready(function () {
+                        grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
+                            fetch("https://python-study-jams.herokuapp.com/new", {
+                                mode: 'no-cors',
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                    first_name: first_name,
+                                    last_name: last_name,
+                                    mob_no: mob_no,
+                                    reg_no: reg_no,
+                                    email: email,
+                                    gender: gender,
+                                    token: token
+                                }),
+                            })
+                                .then(function (response) {
+                                    return response.json();
+                                    console.log(response);
+                                })
+                                .then(function (res) {
+                                    console.log(res);
+                                })
+                                .catch(function (err) {
+                                    console.log(err);
+                                });
+                        })
+                    })
+                }
+
+                else {
+
+                    return false;
+                }
 
                 //Validation
 
                 var emailPattern = new RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
 
-                // Email length regex pattern.
-                var emailLengthPattern = new RegExp($(email).attr('pattern'));
+                function validateForm() {
 
-                // Initialize popover for all required inputs
-                $('input[required]').popover({
-                    placement: 'bottom',
-                    container: 'body',
-                    trigger: 'manual',
-                    selector: 'true',
-                    content: function () {
-                        return $(this).attr('title');
-                    },
-                    template: '<div class="popover" role="tooltip"><div class="arrow"></div><div class="popover-content"></div></div>'
-                }).focus(function () {
-                    $(this).popover('hide');
-                });
+                    var regErr = emailErr = true;
 
-                function validateForm(form) {
-
-                    // Email validation.
-                    if (!emailPattern.test(email) || !emailLengthPattern.test(email) {
-                        $(email).popover('show');
-                        return false;
+                    // Validate email address
+                    if (email == "") {
+                        printError("emailErr", "Please enter your email address");
                     } else {
-                        $(email).addClass('valid')
-                    }
-
-                    // First name validation.
-                    if (first_name.length === 0) {
-                        $(first_name).popover('show');
-                        return false;
-                    }
-
-                    // Last name validation.
-                    if (last_name.length === 0) {
-                        $(last_name).popover('show');
-                        return false;
-                    }
-
-                    // No validation errors.
-                    alert('Submitted successfully');
-                }
-
-                function validateEmail(input) {
-                    if (emailPattern.test(input.value) && emailLengthPattern.test(input.value)) {
-                        $(input).addClass('valid')
-                    } else {
-                        $(input).removeClass('valid');
-                    }
-                }
-
-                function validateRequired(input) {
-
-                    if (input.setCustomValidity) {
-                        input.setCustomValidity('');
-
-                        if (input.validity && !input.validity.valid) {
-                            input.setCustomValidity(input.title);
+                        // Regular expression for basic email validation
+                        var regex = /^\S+@\S+\.\S+$/;
+                        if (regex.test(logemail) === false) {
+                            printError("emailErr", "Please enter a valid email address");
+                        } else {
+                            printError("emailErr", "");
+                            emailErr = false;
                         }
                     }
-
-                    if (input.value.length > 0) {
-                        $(input).addClass('valid');
-                    } else {
-                        $(input).removeClass('valid');
-                    }
-                }
-
-
-                //Form
-
-                //Google reCaptcha
-                grecaptcha.ready(function () {
-                    grecaptcha.execute('6LdDzK8UAAAAADnffKwvEeZZ_Sth79MQRZa0z6Ue', { action: 'homepage' }).then(function (token) {
-                        fetch("https://python-study-jams.herokuapp.com/new", {
-                            mode: 'no-cors',
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                first_name: first_name,
-                                last_name: last_name,
-                                mob_no: mob_no,
-                                reg_no: reg_no,
-                                email: email,
-                                gender: gender,
-                                token: token
-                            }),
-                        })
-                            .then(function (response) {
-                                return response.json();
-                                console.log(response);
-                            })
-                            .then(function (res) {
-                                console.log(res);
-                            })
-                            .catch(function (err) {
-                                console.log(err);
-                            });
-                    })
-                })
+                });
             }
 
     </script>
