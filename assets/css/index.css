@@ -1,9 +1,11 @@
  html {
      scroll-behavior: smooth;
+     overflow-x: hidden;
  }
 
  body {
      font-family: 'Karla', sans-serif;
+     overflow-x: hidden;
  }
 
  /* Read More */
