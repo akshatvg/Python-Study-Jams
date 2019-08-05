@@ -264,3 +264,14 @@
  input:focus {
      outline: none;
  }
+
+
+ /* Temporary Button Styling */
+
+ #sbtns {
+     background-color: #048BA8;
+ }
+
+ #sbtns:hover {
+     background-color: rgb(7, 101, 122);
+ }
