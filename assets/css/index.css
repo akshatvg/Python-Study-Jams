@@ -205,7 +205,7 @@
  }
 
  .scroll-box {
-     overflow-y: scroll;
+     overflow-y: hidden;
      height: 400px;
      margin-bottom: 3vh;
  }
